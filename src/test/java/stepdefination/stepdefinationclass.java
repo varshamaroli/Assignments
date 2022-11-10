@@ -1,15 +1,12 @@
 package stepdefination;
 
-import java.util.List;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+import junit.framework.Assert;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -26,21 +23,15 @@ public class stepdefinationclass {
 
 	@Then("user clicks on signup button")
 	public void user_clicks_on_signup_button() {
-		   System.out.println("user is navigating to the learning application");
-		   System.setProperty("webdriver.chrome.driver", "C:\\Users\\000LTE744\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		   driver = new ChromeDriver();
-		   
-		   //driver.findElement(By.xpath("//a[@href='http://elearningm1.upskills.in/main/auth/inscription.php']")).click();
-		   //driver.findElement(By.linkText("Signup!")).click();
-		   driver.get("http://elearningm1.upskills.in/main/auth/inscription.php");
+		 
+		driver.findElement(By.xpath("//ul[@class='nav nav-pills nav-stacked']/li/a[1]")).click();
+		driver.manage().window().maximize();
 	}
 
 	@Then("User navigates to register page")
 	public void user_navigates_to_register_page() {
 	   
-		   System.out.println("user is navigating to the learning application");
-		   System.setProperty("webdriver.chrome.driver", "C:\\Users\\000LTE744\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		   driver = new ChromeDriver();
+		  
 		   driver.get("http://elearningm1.upskills.in/main/auth/inscription.php");
 	}
 
@@ -133,7 +124,7 @@ public class stepdefinationclass {
 
 	public void user_navigates_on_send_mail_to(String string) {
 		System.out.println("Enter email data");
-		driver.findElement(By.className("select2-search__field")).sendKeys("tes");
+		driver.findElement(By.className("select2-search__field")).sendKeys(string);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    driver.findElement(By.xpath("//li[text()='test test']")).click();
 	   
@@ -159,6 +150,9 @@ public class stepdefinationclass {
 
 	@Then("user gets validation message")
 	public void user_gets_validation_message() {
+		String message = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();
+		  Assert.assertTrue("Message is not sent",message.contains("The message has been sent"));
+
 	   
 	}
 

@@ -1,1 +1,333 @@
-[]
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-11-10T06:24:40.048Z",
+        "line": 18,
+        "name": "Signup to learning portal",
+        "description": "",
+        "id": "login-learning-portal;signup-to-learning-portal;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4942605200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User navigates to learning application",
+            "match": {
+              "location": "stepdefinationclass.user_navigates_to_learning_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2359841500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks on signup button",
+            "match": {
+              "location": "stepdefinationclass.user_clicks_on_signup_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 414971200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User navigates to register page",
+            "match": {
+              "location": "stepdefinationclass.user_navigates_to_register_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 477310400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user enter \"varsha\" FirstName",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"varsha\"",
+                  "offset": 11
+                }
+              ],
+              "location": "stepdefinationclass.user_enter_FirstName(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 76839200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enter \"xyz\" LastName",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"xyz\"",
+                  "offset": 11
+                }
+              ],
+              "location": "stepdefinationclass.user_enter_LastName(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 87302900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enter \"varshm16@gmail.com\" e-mail",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"varshm16@gmail.com\"",
+                  "offset": 11
+                }
+              ],
+              "location": "stepdefinationclass.user_enter_e_mail(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 85156200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enter \"varsh1234\" Username",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"varsh1234\"",
+                  "offset": 11
+                }
+              ],
+              "location": "stepdefinationclass.user_enter_Username(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88927600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user enter \"123\" Pass",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"123\"",
+                  "offset": 11
+                }
+              ],
+              "location": "stepdefinationclass.user_enter_Pass(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 68028300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enter \"123\" Confirm Password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"123\"",
+                  "offset": 11
+                }
+              ],
+              "location": "stepdefinationclass.user_enter_Confirm_Password(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 487333700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user clicks on registeration button",
+            "match": {
+              "location": "stepdefinationclass.user_clicks_on_registeration_button()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-11-10T06:24:49.143Z",
+        "line": 34,
+        "name": "Login to learning portal",
+        "description": "",
+        "id": "login-learning-portal;login-to-learning-portal;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5295988800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User navigates to learning application",
+            "match": {
+              "location": "stepdefinationclass.user_navigates_to_learning_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 65524300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user entered \"varsh1234\" Username",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"varsh1234\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepdefinationclass.user_entered_Username(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 68742200,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user entered  \"123\" Pass",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"123\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepdefinationclass.user_entered_Pass(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3755341700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "stepdefinationclass.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4894889400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user navigates to compose",
+            "match": {
+              "location": "stepdefinationclass.user_navigates_to_compose()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 651758500,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user navigates on \"tes\" send mail to",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tes\"",
+                  "offset": 18
+                }
+              ],
+              "location": "stepdefinationclass.user_navigates_on_send_mail_to(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 87511500,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user enters the subject \"IBM selenium demo\" subject",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"IBM selenium demo\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepdefinationclass.user_enters_the_subject_subject(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1402406800,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user clicks on send message",
+            "match": {
+              "location": "stepdefinationclass.user_clicks_on_send_message()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42649600,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user gets validation message",
+            "match": {
+              "location": "stepdefinationclass.user_gets_validation_message()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "login learning portal",
+    "description": "",
+    "id": "login-learning-portal",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/feature1.feature",
+    "tags": []
+  }
+]

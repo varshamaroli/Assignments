@@ -31,4 +31,4 @@ Feature: login learning portal
 
     Examples: 
       | username  | password | subject           | send mail |
-      | varsh1234 |      123 | IBM selenium demo | amit      |
+      | varsh1234 |      123 | IBM selenium demo | tes       |

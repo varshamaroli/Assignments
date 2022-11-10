@@ -12,7 +12,8 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/java/features",
 		glue = {"stepdefination"},
 		tags={"@sanity,@Regression"}, 
-		dryRun = false
+		dryRun = false,
+		plugin = {"pretty" ,"html:target/htmlreport","json:target/report.json"}
 		
 		)
 
