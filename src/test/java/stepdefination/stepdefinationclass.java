@@ -1,6 +1,7 @@
 package stepdefination;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -116,31 +117,30 @@ public class stepdefinationclass {
 
 	}
 	@Then("user navigates on {string} send mail to")
-	public void user_navigates_on_send_mail_to(String SendTo) throws Throwable {
-		driver.findElement(By.xpath("//input[@type='search']")).sendKeys(SendTo);
-		Thread.sleep(2000L);
-		List<WebElement> options = driver.findElements(By.xpath("//ul[contains(@id,'users-results')]"));
-		for (WebElement option : options) {
-			System.out.println(option.getText());
-			if (option.getText().equalsIgnoreCase("amit xyz (amit)")) {
-			   option.click();
-				break;
-			}
-		}
-		System.out.println("User enters Send to field");
+	//public void user_navigates_on_send_mail_to(String SendTo) throws Throwable {
+	//	driver.findElement(By.xpath("//input[@type='search']")).sendKeys(SendTo);
+	//	Thread.sleep(2000L);
+	//	List<WebElement> options = driver.findElements(By.xpath("//ul[contains(@id,'users-results')]"));
+	//	for (WebElement option : options) {
+	//		System.out.println(option.getText());
+	//		if (option.getText().equalsIgnoreCase("amit xyz (amit)")) {
+	//		   option.click();
+	//			break;
+	//		}
+	//	}
+	//	System.out.println("User enters Send to field");
+	//}
+
+	public void user_navigates_on_send_mail_to(String string) {
+		System.out.println("Enter email data");
+		driver.findElement(By.className("select2-search__field")).sendKeys("tes");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    driver.findElement(By.xpath("//li[text()='test test']")).click();
+	   
+		driver.findElement(By.name("title")).sendKeys("Test Email"); 
+
 	}
-
-	//public void user_navigates_on_send_mail_to(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	
-	//driver.findElement(By.xpath("//input[@class='select2-search__field']]")).sendKeys;	
-		//driver.findElement(By.xpath("//input[@style='width: 453px;']")).sendKeys(string);
-		//ul[@class='select2-selection__rendered']/li/input
-		//driver.findElement(By.xpath("//ul[@class='select2-selection__rendered']/li/input"));
-		//driver.findElement(By.xpath("//ul[@class='select2-selection__rendered']/li/input")).sendKeys("xyz");
-		//driver.findElement(By.xpath("//li[@title()='amit xyz']/li/ul")).click();
-
-		//}
+		
 		
 	@Then("user enters the subject {string} subject")
 	public void user_enters_the_subject_subject(String string) {
@@ -150,8 +150,7 @@ public class stepdefinationclass {
 	@Then("user clicks on send message")
 	public void user_clicks_on_send_message() {
 	    // Write code here that turns the phrase above into concrete actions
-		
-		driver.findElement(By.name("compose")).click();
+		driver.findElement(By.xpath("//button[@name='compose']")).click();
 	}
 
 
